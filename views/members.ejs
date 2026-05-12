@@ -1,0 +1,21 @@
+<%- include("templates/header") %>
+
+<h1 class="fw-bold mb-1">Hello, <%= name %>.</h1>
+<p class="text-muted mb-4">Welcome to the members area!</p>
+
+<h4 class="mb-3">Interesting images:</h4>
+<div class="row g-3">
+  <% images.forEach(img => { %>
+    <div class="col-12 col-md-4">
+      <img src="/<%= img %>" alt="Cat photo"
+           class="img-fluid rounded shadow-sm w-100"
+           style="object-fit:cover; max-height:300px;" />
+    </div>
+  <% }); %>
+</div>
+
+<div class="mt-4">
+  <a href="/logout" class="btn btn-outline-danger">Sign Out</a>
+</div>
+
+<%- include("templates/footer") %>

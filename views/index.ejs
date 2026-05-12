@@ -1,0 +1,23 @@
+<%- include("templates/header") %>
+
+<% if (authenticated) { %>
+  <div class="text-center py-5">
+    <h1 class="display-5 fw-bold">Hello, <%= name %>!</h1>
+    <p class="lead text-muted">Welcome back</p>
+    <div class="d-flex justify-content-center gap-3 mt-4">
+      <a href="/members" class="btn btn-primary btn-lg">Go to Members Area</a>
+      <a href="/logout"  class="btn btn-outline-secondary btn-lg">Logout</a>
+    </div>
+  </div>
+<% } else { %>
+  <div class="text-center py-5">
+    <h1 class="display-5 fw-bold">Welcome!</h1>
+    <p class="lead text-muted">Sign up or log in.</p>
+    <div class="d-flex justify-content-center gap-3 mt-4">
+      <a href="/signup" class="btn btn-primary btn-lg">Sign Up</a>
+      <a href="/login"  class="btn btn-outline-primary btn-lg">Log In</a>
+    </div>
+  </div>
+<% } %>
+
+<%- include("templates/footer") %>

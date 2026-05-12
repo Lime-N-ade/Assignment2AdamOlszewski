@@ -1,0 +1,21 @@
+{
+  "name": "assignment2-olszewski-adam",
+  "version": "1.0.0",
+  "description": "COMP 2537 Assignment 2",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "connect-mongo": "^5.1.0",
+    "dotenv": "^16.6.1",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "joi": "^17.13.1",
+    "mongo-sanitizer": "^1.0.3",
+    "mongodb": "^6.21.0",
+    "nodemon": "^3.1.14"
+  }
+}

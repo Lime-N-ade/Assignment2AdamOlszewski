@@ -1,0 +1,17 @@
+<div class="d-flex align-items-center justify-content-between border rounded px-4 py-3 mb-2 bg-white shadow-sm">
+  <div>
+    <span class="fw-semibold"><%= user.name %></span>
+    <span class="text-muted ms-2">(<%= user.email %>)</span>
+    <% if (user.user_type === 'admin') { %>
+      <span class="badge bg-danger ms-2">admin</span>
+    <% } else { %>
+      <span class="badge bg-secondary ms-2">user</span>
+    <% } %>
+  </div>
+  <div class="d-flex gap-2">
+    <a href="/promote?email=<%= encodeURIComponent(user.email) %>"
+       class="btn btn-sm btn-success">Promote to Admin</a>
+    <a href="/demote?email=<%= encodeURIComponent(user.email) %>"
+       class="btn btn-sm btn-danger">Demote to User</a>
+  </div>
+</div>

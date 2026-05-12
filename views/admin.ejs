@@ -1,0 +1,13 @@
+<%- include("templates/header") %>
+
+<h1 class="fw-bold mb-4">User Management</h1>
+
+<% if (users.length === 0) { %>
+  <p class="text-muted">No users found in the database.</p>
+<% } else { %>
+  <% users.forEach(user => { %>
+    <%- include('templates/user', { user }) %>
+  <% }); %>
+<% } %>
+
+<%- include("templates/footer") %>
